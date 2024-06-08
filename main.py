@@ -8,6 +8,7 @@ acertos   = []
 erros     = 0
 
 while True:
+    # essa linha mostra a palavra secreta
     adivinha = ""
     for letra in palavra:
         if letra in acertos:
