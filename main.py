@@ -29,7 +29,7 @@ while True:
     tentativas = input('\nDigite uma letra:').lower().strip()
     if tentativas in digitadas:
         print('Você ja usou essa letra!')
-        continue
+        continue\
     else:
         digitadas += tentativas
         if tentativas in palavra:
@@ -40,4 +40,4 @@ while True:
     #desenhando a forcar      
     print("X==:==")
     print("x  :  ")
-         
+    
