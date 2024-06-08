@@ -29,7 +29,7 @@ while True:
     tentativas = input('\nDigite uma letra:').lower().strip()
     if tentativas in digitadas:
         print('Você ja usou essa letra!')
-        continue\
+        continue
     else:
         digitadas += tentativas
         if tentativas in palavra:
@@ -41,3 +41,32 @@ while True:
     print("X==:==")
     print("x  :  ")
     
+    if erros >= 1:
+        print("X  O  ")
+    else:
+        print('X')    
+        
+    linha2 = ''
+    if erros == 2:
+        linha2 = " | "
+    elif erros == 3:
+        linha2 = " /| "
+    elif erros >= 4:
+        linha2 = " /|\  "
+        print(f'X{linha2}')
+        
+    linhas3 = ""
+    if erros == 5:
+        linhas3 += " / "
+    elif erros >=6:
+        linhas3 += " / \  "
+    print(f'X{linhas3}')
+    print(f'X\n========')
+    
+    
+    # condição de fim de  jogo
+    
+    if erros ==6:
+        print('Enforcado')
+        print(f'A palavra correta era {palavra}')
+        break
